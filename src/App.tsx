@@ -50,7 +50,6 @@ export default function App() {
     { id: 'capabilities', label: 'Capabilities' },
     { id: 'experience', label: 'Experience' },
     { id: 'simulator', label: 'RGM Simulator' },
-    { id: 'portfolio', label: 'Portfolio' },
     { id: 'blog', label: 'Blog Insights' },
     { id: 'contact', label: 'Contact' },
   ];

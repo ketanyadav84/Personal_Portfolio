@@ -34,7 +34,6 @@ export const Header: React.FC<HeaderProps> = ({
     { name: 'Capabilities', id: 'capabilities' },
     { name: 'Experience', id: 'experience' },
     { name: 'RGM Simulator', id: 'simulator' },
-    { name: 'Portfolio', id: 'portfolio' },
     { name: 'Blog Insights', id: 'blog' },
     { name: 'Contact', id: 'contact' },
   ];

@@ -48,7 +48,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResumeModal, setActiveTab 
               <button onClick={() => handleNav('capabilities')} className="text-left hover:text-blue-400 transition-colors">Capabilities</button>
               <button onClick={() => handleNav('experience')} className="text-left hover:text-blue-400 transition-colors">Experience</button>
               <button onClick={() => handleNav('simulator')} className="text-left hover:text-blue-400 transition-colors">RGM Simulator</button>
-              <button onClick={() => handleNav('portfolio')} className="text-left hover:text-blue-400 transition-colors">Portfolio</button>
               <button onClick={() => handleNav('blog')} className="text-left hover:text-blue-400 transition-colors">Blog Insights</button>
               <button onClick={() => handleNav('contact')} className="text-left hover:text-blue-400 transition-colors">Contact</button>
               <button onClick={onOpenResumeModal} className="text-left text-blue-400 hover:underline">

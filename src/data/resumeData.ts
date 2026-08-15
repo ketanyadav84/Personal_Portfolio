@@ -178,10 +178,17 @@ export const EDUCATION: EducationItem[] = [
   },
   {
     id: "cfa",
-    degree: "CFA (Financial Analysis & Consulting)",
+    degree: "CFA (ICFAI) Certified",
     institution: "ICFAI University",
     year: "2010",
-    details: "Advanced financial valuation, portfolio analysis, and corporate finance consultancy."
+    details: "Financial valuation, portfolio analysis, and corporate finance consultancy."
+  },
+  {
+    id: "mfa",
+    degree: "Master of Financial Analysis",
+    institution: "ICFAI University",
+    year: "2010",
+    details: "Advanced quantitative financial analysis, valuation models, and investment decision analysis."
   },
   {
     id: "graduate",

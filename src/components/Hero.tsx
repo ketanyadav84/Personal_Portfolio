@@ -70,7 +70,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal, onNavigateTab }) 
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
                 <Award className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                CFA Certified (2010)
+                CFA (ICFAI) Certified (2010)
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-teal-50 dark:bg-teal-950/50 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+                <Award className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                Master of Financial Analysis (2010)
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
                 <TrendingUp className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
