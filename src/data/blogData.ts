@@ -14,9 +14,9 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
 # Mastering Price Pack Architecture (PPA) in FMCG
 
-In the fast-moving consumer goods (FMCG) landscape, raw material inflation and shifting consumer purchasing power create a relentless dilemma: **How do you pass on necessary price increases without driving cost-conscious shoppers away or trigger cannibalization?**
+In the fast-moving consumer goods (FMCG) landscape, raw material inflation and shifting consumer purchasing power create a relentless dilemma: **How do you pass on necessary price increases without driving cost-conscious shoppers away or triggering cannibalization?**
 
-The answer lies in **Price Pack Architecture (PPA)**—the art and science of aligning pack sizes, price thresholds, product formats, and distribution channels to target specific consumer occasions and price elasticities.
+The answer lies in **Price Pack Architecture (PPA)**—the strategic discipline of aligning pack sizes, price thresholds, product formats, and distribution channels to target specific consumer occasions and price elasticities.
 
 ---
 
@@ -33,19 +33,24 @@ A robust PPA framework rests on four operational pillars:
 
 ## 2. Step-by-Step Implementation Framework
 
-Here is the 4-step framework I used at PepsiCo and AB-InBev to transform raw commercial data into actionable PPA roadmaps:
+Here is the 4-step framework used across leading FMCG and beverage portfolios to transform raw commercial data into actionable PPA roadmaps:
 
 ### Step 1: Establish Sourcing Matrices & Elasticities
 Before modifying a single gram or unit price, map out your **Own-Price Elasticity** and **Cross-Price Elasticity** across competing SKUs. 
-*Example:* If SKU A increases price by 5%, what percentage shifts to SKU B vs. competitor brand C?
+
+*Example Scenario:* If SKU A increases price by 5%, what percentage shifts to SKU B (internal portfolio) versus competing Brand C?
 
 ### Step 2: Build Brand-Ladder Visualizations
 Plot your portfolio along two axes: **Price per Standard Unit** (X-axis) vs. **Pack Size in Units/Weight** (Y-axis). Identify gaps where consumer demand exists but no tailored pack exists.
 
-\`\`\`
-[Premium Single] ---> High Margin / Low Vol
-[Core Multi-Pack] ---> High Volume / Standard Margin
-[Value Bulk Pack] ---> Entry Price Point / Shield Pack
+\`\`\`text
+┌────────────────────────────────────────────────────────────┐
+│                  PORTFOLIO BRAND LADDER                    │
+├────────────────────────────────────────────────────────────┤
+│ [Premium Single Pack]  ───> High Margin / Selective Reach  │
+│ [Core Multi-Pack]      ───> High Volume / Baseline Margin  │
+│ [Value Bulk Pack]      ───> Shield Pack / Entry Price Tier │
+└────────────────────────────────────────────────────────────┘
 \`\`\`
 
 ### Step 3: Simulate "What-If" Scenarios
@@ -53,7 +58,7 @@ Use an interactive **RGM Scenario Simulator** to evaluate rate changes, mix impa
 
 ---
 
-## 3. Key Takeaway
+## 3. Key Takeaways
 
 Price increases don't have to mean volume loss. By strategically engineering your Price Pack Architecture, FMCG brands can increase gross profit while continuing to provide accessible entry points for consumers.
     `
@@ -73,13 +78,13 @@ Price increases don't have to mean volume loss. By strategically engineering you
 
 When managing commercial strategy across diverse international markets—such as Middle America (MAZ)—one major challenge arises: **Commercial managers on the ground often lack access to fast, intuitive tools to test pricing hypotheses.**
 
-Static spreadsheets with thousands of unlinked cells often lead to slow decision cycles, version control nightmare, and overlooked cross-pack cannibalization.
+Static spreadsheets with thousands of unlinked cells often lead to slow decision cycles, version control issues, and overlooked cross-pack cannibalization.
 
 ---
 
 ## 1. The $12 Million Profit Problem
 
-In 2023 at AB-InBev, our challenge was clear: Revenue Managers needed a unified platform to model multi-brand pricing adjustments across various pack sizes and sales channels.
+In regional commercial operations, Revenue Managers needed a unified platform to model multi-brand pricing adjustments across various pack sizes and sales channels.
 
 The solution was the **RGM Simulator Product**—a cloud-backed scenario engine combining:
 * Automated econometric regression models
@@ -93,25 +98,33 @@ The solution was the **RGM Simulator Product**—a cloud-backed scenario engine 
 To bridge data science with business execution, the tool incorporated three layers:
 
 ### Layer 1: Data Preprocessing & Elasticity Engine
-* Inputs: 3+ years of weekly POS data, scanner data, promotional schedules, and macroeconomic indices.
-* Models: Multi-variable log-log regression models estimating point elasticities and cross-product substitution rates.
+* **Inputs**: 3+ years of weekly POS data, scanner data, promotional schedules, and macroeconomic indices.
+* **Models**: Multi-variable log-log regression models estimating point elasticities and cross-product substitution rates.
 
 ### Layer 2: What-If Simulation Math
-The formula for simulated volume $V_{sim}$ for product $i$:
+The formula for simulated volume across the portfolio:
 
-$$V_{sim, i} = V_{base, i} \\times \\left(1 + \\epsilon_{i,i} \\cdot \\Delta P_i + \\sum_{j \\neq i} \\epsilon_{i,j} \\cdot \\Delta P_j\\right)$$
+\`\`\`math
+V_simulated(i) = V_base(i) × [ 1 + (ε_own(i) × ΔP_i) + Σ (ε_cross(i,j) × ΔP_j) ]
+\`\`\`
 
-where $\\epsilon_{i,i}$ is own elasticity and $\\epsilon_{i,j}$ is cross elasticity from product $j$.
+**Parameter Definitions:**
+* **V_simulated(i)**: Projected volume for SKU *i* after price revision.
+* **V_base(i)**: Baseline historical volume prior to price change.
+* **ε_own(i)**: Own-price elasticity coefficient for SKU *i*.
+* **ΔP_i**: Percentage change in price for SKU *i*.
+* **ε_cross(i,j)**: Cross-price elasticity from product *j* to product *i*.
+* **ΔP_j**: Percentage change in price for competing product *j*.
 
 ### Layer 3: Intuitive UI & Executive Dashboarding
-We replaced complex raw outputs with interactive sliders, waterfall charts breakdown (Base vs Price Effect vs Volume Shift Effect), and exportable executive briefing slides.
+We replaced complex raw outputs with interactive sliders, waterfall chart breakdowns (Base Volume vs. Price Effect vs. Cross-Brand Cannibalization), and exportable executive briefing slides.
 
 ---
 
 ## 3. Results & Impact
 
 * **$12 Million Profit Impact**: Enabled local commercial directors to execute surgical price adjustments without sparking volume drops.
-* **Global Cloud Scaling**: Transitioned from a regional tool in MAZ into a standardized cloud revenue management software across global business units.
+* **Global Cloud Scaling**: Standardized cloud revenue management workflows across regional business units with fast turnarounds.
     `
   },
   {
@@ -143,15 +156,20 @@ Why? Because traditional analytics often mistake *promoted volume* for *incremen
 
 ## 2. Calculating True Incremental ROI
 
-To measure real promotional ROI, we must decompose promotional volume:
+To measure real promotional ROI, we must decompose total promotional volume:
 
-$$\\text{Promoted Volume} = \\text{Base Sales} + \\text{Incremental Volume} + \\text{Pantry Loading} + \\text{Cannibalization}$$
+\`\`\`math
+Promoted Volume = Base Sales + Incremental Volume + Pantry Loading - Cannibalization
+\`\`\`
 
 ### The True ROI Formula:
 
-$$\\text{Incremental ROI} = \\frac{\\text{Incremental Profit Contribution} - \\text{Total Trade Discount Cost}}{\\text{Total Trade Discount Cost}}$$
+\`\`\`math
+Incremental ROI (%) = [ (Incremental Profit Contribution - Total Trade Discount Cost) / Total Trade Discount Cost ] × 100
+\`\`\`
 
-If Incremental ROI < 0, you are losing money on the promotion despite high headline volume!
+**Critical Guardrail:**
+If **Incremental ROI < 0%**, the promotion is losing money for the enterprise despite high headline volume figures.
 
 ---
 
@@ -177,22 +195,21 @@ If Incremental ROI < 0, you are losing money on the promotion despite high headl
 
 The most sophisticated machine learning model in the world is useless if the commercial team on the ground doesn't understand or trust its outputs.
 
-During my studies in the **Advanced Management Program in Business Analytics (AMPBA) at Indian School of Business (ISB)** and across my delivery leadership roles at Tiger Analytics, AB-InBev, and TCS, one constant truth emerged: **Analytics success is 20% algorithms and 80% change management.**
+Across delivery leadership roles and advanced analytics programs, one constant truth emerges: **Analytics success is 20% algorithms and 80% change management.**
 
 ---
 
 ## 1. The Translation Gap
 
-Data Scientists speak the language of $R^2$, RMSE, p-values, and feature importances.
-Commercial Leaders speak the language of Gross Margin %, Market Share, Trade Spend, and Volume Target.
+Data Scientists speak the language of R-squared (R²), RMSE, p-values, and feature importances. Commercial Leaders speak the language of Gross Margin %, Market Share, Trade Spend, and Volume Targets.
 
 To close this gap, Program Leads must serve as translators:
 
-| Data Science Term | Commercial Translation |
-| :--- | :--- |
-| Log-Log Coefficient | Price Sensitivity / Elasticity % |
-| Confusion Matrix | Risk of Stock-out vs Over-discounting |
-| Feature Importance | Key Market Driver Ranking |
+| Data Science Term | Commercial Translation | Business Impact |
+| :--- | :--- | :--- |
+| **Log-Log Regression Coeff** | Price Sensitivity / Elasticity % | Determines optimum price band |
+| **Confusion Matrix Error** | Risk of Stock-Out vs Over-Discounting | Protects on-shelf availability |
+| **Feature Importance Ranking** | Key Market Growth Driver Ranking | Guides marketing spend allocation |
 
 ---
 
@@ -218,7 +235,7 @@ To close this gap, Program Leads must serve as translators:
 
 Spreadsheets are where business ideas start. Excel remains the ultimate rapid prototyping tool for financial modeling and revenue management.
 
-However, as an organization scales across markets, reliance on Excel files leads to fragmented data, broken formulas, security risks, and lack of audit trails.
+However, as an organization scales across markets, reliance on standalone Excel files leads to fragmented data, broken formulas, security risks, and lack of audit trails.
 
 ---
 
@@ -229,7 +246,7 @@ Transforming a spreadsheet model into an enterprise-grade cloud product follows 
 1. **Audit & Logic Extraction**: Map every formula, macro, and hardcoded assumption into clean mathematical specifications.
 2. **Database & API Architecture**: Move raw inputs and historical transaction datasets into cloud data warehouses (BigQuery/PostgreSQL) with RESTful backend endpoints.
 3. **Standardized Calculation Engine**: Implement core calculations in Python/Node microservices ensuring high calculation speed and automated regression testing.
-4. **Modern Responsive UI**: Build responsive web frontends (React / Power BI Embedded) featuring permission governance, session saving, and instant scenario comparisons.
+4. **Modern Responsive UI**: Build responsive web frontends featuring permission governance, session saving, and instant scenario comparisons.
 
 ---
 

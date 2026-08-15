@@ -1,7 +1,9 @@
 import React, { useState, useMemo } from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { BLOG_POSTS } from '../data/blogData';
 import { BlogPost } from '../types';
-import { Search, Clock, Calendar, Tag, BookOpen, X, Share2, Bookmark, BookmarkCheck, ArrowRight, Sparkles } from 'lucide-react';
+import { Search, Clock, Calendar, BookOpen, X, Share2, Bookmark, BookmarkCheck, ArrowRight, Calculator } from 'lucide-react';
 
 export const BlogSection: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -252,30 +254,125 @@ export const BlogSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Formatted Text Render */}
-                <div className="prose dark:prose-invert max-w-none space-y-4">
-                  {activePost.content.split('\n\n').map((paragraph, idx) => {
-                    if (paragraph.startsWith('# ')) {
-                      return <h1 key={idx} className="text-2xl font-extrabold text-slate-900 dark:text-white pt-2">{paragraph.replace('# ', '')}</h1>;
-                    }
-                    if (paragraph.startsWith('## ')) {
-                      return <h2 key={idx} className="text-xl font-bold text-slate-900 dark:text-white pt-3 border-b pb-1 dark:border-slate-800">{paragraph.replace('## ', '')}</h2>;
-                    }
-                    if (paragraph.startsWith('### ')) {
-                      return <h3 key={idx} className="text-lg font-bold text-blue-600 dark:text-blue-400 pt-2">{paragraph.replace('### ', '')}</h3>;
-                    }
-                    if (paragraph.startsWith('* ') || paragraph.startsWith('- ')) {
-                      const items = paragraph.split('\n');
-                      return (
-                        <ul key={idx} className="list-disc pl-5 space-y-1">
-                          {items.map((it, i2) => (
-                            <li key={i2}>{it.replace(/^[*|-]\s*/, '')}</li>
-                          ))}
+                {/* Formatted Text Render with react-markdown */}
+                <div className="blog-article-content max-w-none text-slate-800 dark:text-slate-200">
+                  <Markdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      h1: ({ children }) => (
+                        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white pt-2 pb-2 tracking-tight">
+                          {children}
+                        </h1>
+                      ),
+                      h2: ({ children }) => (
+                        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-5 pb-2 border-b border-slate-200 dark:border-slate-800 flex items-center gap-2">
+                          {children}
+                        </h2>
+                      ),
+                      h3: ({ children }) => (
+                        <h3 className="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400 pt-4 pb-1">
+                          {children}
+                        </h3>
+                      ),
+                      p: ({ children }) => (
+                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm sm:text-base my-3">
+                          {children}
+                        </p>
+                      ),
+                      strong: ({ children }) => (
+                        <strong className="font-bold text-slate-900 dark:text-white">
+                          {children}
+                        </strong>
+                      ),
+                      em: ({ children }) => (
+                        <em className="italic text-slate-800 dark:text-slate-200">
+                          {children}
+                        </em>
+                      ),
+                      ul: ({ children }) => (
+                        <ul className="list-disc pl-5 space-y-1.5 my-3 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
+                          {children}
                         </ul>
-                      );
-                    }
-                    return <p key={idx} className="text-slate-700 dark:text-slate-300 leading-relaxed">{paragraph}</p>;
-                  })}
+                      ),
+                      ol: ({ children }) => (
+                        <ol className="list-decimal pl-5 space-y-1.5 my-3 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
+                          {children}
+                        </ol>
+                      ),
+                      li: ({ children }) => (
+                        <li className="leading-relaxed">
+                          {children}
+                        </li>
+                      ),
+                      hr: () => (
+                        <hr className="my-6 border-slate-200 dark:border-slate-800" />
+                      ),
+                      code: ({ className, children, ...props }) => {
+                        const isMath = className?.includes('language-math');
+                        const isTextDiagram = className?.includes('language-text');
+                        
+                        if (isMath) {
+                          return (
+                            <div className="my-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50/50 dark:from-blue-950/40 dark:to-indigo-950/30 border border-blue-200 dark:border-blue-800/80 shadow-xs">
+                              <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 mb-2">
+                                <Calculator className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                                <span>Mathematical Model & Equation</span>
+                              </div>
+                              <div className="font-mono text-sm sm:text-base font-semibold text-slate-900 dark:text-blue-100 overflow-x-auto py-1">
+                                {children}
+                              </div>
+                            </div>
+                          );
+                        }
+
+                        if (isTextDiagram) {
+                          return (
+                            <pre className="my-4 p-4 rounded-xl bg-slate-900 dark:bg-slate-950 text-emerald-400 font-mono text-xs sm:text-sm overflow-x-auto border border-slate-800 leading-relaxed shadow-inner">
+                              <code>{children}</code>
+                            </pre>
+                          );
+                        }
+
+                        return (
+                          <code className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs font-semibold" {...props}>
+                            {children}
+                          </code>
+                        );
+                      },
+                      pre: ({ children }) => (
+                        <div className="my-3">{children}</div>
+                      ),
+                      table: ({ children }) => (
+                        <div className="overflow-x-auto my-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs">
+                          <table className="w-full text-left text-sm border-collapse bg-white dark:bg-slate-900">
+                            {children}
+                          </table>
+                        </div>
+                      ),
+                      thead: ({ children }) => (
+                        <thead className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold border-b border-slate-200 dark:border-slate-700">
+                          {children}
+                        </thead>
+                      ),
+                      th: ({ children }) => (
+                        <th className="p-3 text-xs uppercase tracking-wider font-bold">
+                          {children}
+                        </th>
+                      ),
+                      td: ({ children }) => (
+                        <td className="p-3 border-t border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs sm:text-sm">
+                          {children}
+                        </td>
+                      ),
+                      blockquote: ({ children }) => (
+                        <blockquote className="border-l-4 border-blue-500 pl-4 py-1.5 my-3 italic text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/40 rounded-r-lg">
+                          {children}
+                        </blockquote>
+                      )
+                    }}
+                  >
+                    {activePost.content}
+                  </Markdown>
                 </div>
 
               </div>
