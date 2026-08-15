@@ -1,7 +1,45 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/resumeData';
 import { ContactFormData, ContactResponse } from '../types';
-import { Mail, Phone, Linkedin, Send, CheckCircle2, AlertCircle, Loader2, MessageSquare, Clock } from 'lucide-react';
+import { Mail, Phone, Linkedin, Send, CheckCircle2, AlertCircle, Loader2, Clock } from 'lucide-react';
+
+const COUNTRY_CODES = [
+  { code: '+91', country: 'India', flag: '🇮🇳' },
+  { code: '+1', country: 'US / Canada', flag: '🇺🇸' },
+  { code: '+44', country: 'UK', flag: '🇬🇧' },
+  { code: '+971', country: 'UAE', flag: '🇦🇪' },
+  { code: '+65', country: 'Singapore', flag: '🇸🇬' },
+  { code: '+61', country: 'Australia', flag: '🇦🇺' },
+  { code: '+49', country: 'Germany', flag: '🇩🇪' },
+  { code: '+33', country: 'France', flag: '🇫🇷' },
+  { code: '+41', country: 'Switzerland', flag: '🇨🇭' },
+  { code: '+31', country: 'Netherlands', flag: '🇳🇱' },
+  { code: '+353', country: 'Ireland', flag: '🇮🇪' },
+  { code: '+966', country: 'Saudi Arabia', flag: '🇸🇦' },
+  { code: '+81', country: 'Japan', flag: '🇯🇵' },
+  { code: '+86', country: 'China', flag: '🇨🇳' },
+  { code: '+852', country: 'Hong Kong', flag: '🇭🇰' },
+  { code: '+55', country: 'Brazil', flag: '🇧🇷' },
+  { code: '+52', country: 'Mexico', flag: '🇲🇽' },
+  { code: '+27', country: 'South Africa', flag: '🇿🇦' },
+  { code: '+64', country: 'New Zealand', flag: '🇳🇿' },
+  { code: '+34', country: 'Spain', flag: '🇪🇸' },
+  { code: '+39', country: 'Italy', flag: '🇮🇹' },
+  { code: '+46', country: 'Sweden', flag: '🇸🇪' },
+  { code: '+47', country: 'Norway', flag: '🇳🇴' },
+  { code: '+45', country: 'Denmark', flag: '🇩🇰' },
+  { code: '+60', country: 'Malaysia', flag: '🇲🇾' },
+  { code: '+62', country: 'Indonesia', flag: '🇮🇩' },
+  { code: '+63', country: 'Philippines', flag: '🇵🇭' },
+  { code: '+84', country: 'Vietnam', flag: '🇻🇳' },
+  { code: '+82', country: 'South Korea', flag: '🇰🇷' },
+  { code: '+20', country: 'Egypt', flag: '🇪🇬' },
+  { code: '+234', country: 'Nigeria', flag: '🇳🇬' },
+  { code: '+254', country: 'Kenya', flag: '🇰🇪' },
+  { code: '+54', country: 'Argentina', flag: '🇦🇷' },
+  { code: '+56', country: 'Chile', flag: '🇨🇱' },
+  { code: '+57', country: 'Colombia', flag: '🇨🇴' },
+];
 
 export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -13,6 +51,8 @@ export const ContactSection: React.FC = () => {
     message: '',
   });
 
+  const [countryCode, setCountryCode] = useState('+91');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<ContactResponse | null>(null);
 
@@ -28,6 +68,8 @@ export const ContactSection: React.FC = () => {
     setLoading(true);
     setResponse(null);
 
+    const fullPhone = phoneNumber.trim() ? `${countryCode} ${phoneNumber.trim()}` : '';
+
     // Simulate instant client-side confirmation without requiring backend email setup
     setTimeout(() => {
       setResponse({
@@ -42,11 +84,12 @@ export const ContactSection: React.FC = () => {
       setFormData({
         name: '',
         email: '',
-        phone: '',
+        phone: fullPhone,
         subject: '',
         reason: 'Consulting',
         message: '',
       });
+      setPhoneNumber('');
       setLoading(false);
     }, 600);
   };
@@ -225,20 +268,36 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Phone */}
+                {/* Phone with Separate Country Code and Number Input */}
                 <div className="space-y-1.5">
                   <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                     Phone Number (Optional)
                   </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="e.g. +1 (555) 019-2834"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    id="contact-input-phone"
-                  />
+                  <div className="flex gap-2">
+                    <select
+                      id="contact-select-country-code"
+                      name="countryCode"
+                      value={countryCode}
+                      onChange={(e) => setCountryCode(e.target.value)}
+                      className="w-[115px] sm:w-[125px] px-2.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 shrink-0 cursor-pointer font-medium"
+                      title="Select Country Dial Code"
+                    >
+                      {COUNTRY_CODES.map((item) => (
+                        <option key={`${item.code}-${item.country}`} value={item.code}>
+                          {item.flag} {item.code}
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="e.g. 99244 70299"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      className="flex-1 min-w-0 px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      id="contact-input-phone"
+                    />
+                  </div>
                 </div>
 
                 {/* Reason Select */}

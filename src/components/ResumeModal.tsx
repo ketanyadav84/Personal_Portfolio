@@ -230,7 +230,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600 dark:text-slate-400 pt-1">
               <span className="flex items-center gap-1"><Mail className="w-3.5 h-3.5 text-blue-500" /> {PERSONAL_INFO.email}</span>
               <span className="flex items-center gap-1"><Phone className="w-3.5 h-3.5 text-blue-500" /> {PERSONAL_INFO.phone}</span>
-              <span className="flex items-center gap-1"><Linkedin className="w-3.5 h-3.5 text-blue-500" /> linkedin.com/in/ketanyadav84</span>
+              <a
+                href="https://www.linkedin.com/in/ketanyadav84/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-blue-500" />
+                <span>linkedin.com/in/ketanyadav84</span>
+              </a>
             </div>
           </div>
 

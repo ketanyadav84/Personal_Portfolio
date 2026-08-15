@@ -44,17 +44,10 @@ In `/src/components/Hero.tsx` (around lines 60–85), you can edit or add creden
 - **MFA Credential**: `Master of Financial Analysis (2010)`
 - **Impact Badge**: `Driven $12M+ Profit Impact`
 
-#### C. Metric Counter Cards
-In `/src/data/resumeData.ts` under `PERSONAL_INFO.metrics`:
-```typescript
-metrics: [
-  { label: "Years Experience", value: "10+" },
-  { label: "MAZ Profit Impact", value: "$12M" },
-  { label: "Client NPS Score", value: "90+" },
-  { label: "Productivity Gain", value: "26%" }
-]
-```
-*To change the numbers or labels, simply edit the `value` and `label` strings.*
+#### C. Overall Career Timeline & Journey Cards
+Directly beneath the bio, the profile displays an interactive **Career Journey Overview** detailing your milestones across Tiger Analytics, AB-InBev, PepsiCo, NielsenIQ, TCS, and Financial Markets.
+- To update or add career milestones, edit the `WORK_HISTORY` array in `/src/data/resumeData.ts`.
+- The overview cards will automatically reflect any updates made to company names, roles, periods, and skill tags.
 
 ---
 
@@ -211,6 +204,7 @@ Use the text code block format:
 
 ### Customizing:
 - **Email & Phone Links**: Update `PERSONAL_INFO.email` and `PERSONAL_INFO.phone`.
+- **Country Code Selector & Phone Input**: The form features an international country code picker (defaulting to India `+91`, with US/Canada, UK, UAE, Singapore, Europe, etc.) alongside a separate phone number text field.
 - **LinkedIn Profile**: Update `PERSONAL_INFO.linkedIn`.
 - **Inquiry Categories**: You can edit the dropdown options in `ContactSection.tsx` (e.g., "Commercial Analytics Consultation", "Full-Time Leadership Role", "Speaking / Advisory").
 

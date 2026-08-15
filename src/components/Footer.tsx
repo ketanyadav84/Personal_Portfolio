@@ -68,10 +68,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResumeModal, setActiveTab 
                 <span>{PERSONAL_INFO.email}</span>
               </a>
               <a
-                href={PERSONAL_INFO.linkedIn}
+                href="https://www.linkedin.com/in/ketanyadav84/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-blue-400 transition-colors"
+                id="footer-linkedin-link"
               >
                 <Linkedin className="w-3.5 h-3.5 text-blue-400" />
                 <span>LinkedIn Profile</span>
