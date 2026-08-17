@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, TrendingUp, DollarSign, BarChart2, RefreshCw, Info, HelpCircle } from 'lucide-react';
+import { TrendingUp, RefreshCw, Info } from 'lucide-react';
 
 export const RGMCalculatorWidget: React.FC = () => {
   // Simulator State Parameters
@@ -53,10 +53,6 @@ export const RGMCalculatorWidget: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-semibold">
-            <Calculator className="w-3.5 h-3.5" />
-            <span>Interactive Demo: MAZ Revenue Growth Tool</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Price Elasticity & RGM Scenario Simulator
           </h2>

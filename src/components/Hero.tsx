@@ -18,12 +18,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal, onNavigateTab }) 
         
         {/* Profile Summary Header */}
         <div className="max-w-4xl space-y-6 text-left">
-          {/* Availability Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-blue-300 text-xs font-semibold tracking-wide">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Program Lead & RGM Analytics Expert</span>
-          </div>
-
           {/* Main Heading */}
           <div className="space-y-2">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">

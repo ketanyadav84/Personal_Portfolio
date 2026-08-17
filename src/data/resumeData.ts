@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
   summary: "Analytics professional with 10+ years of experience in Revenue Growth Management (RGM), pricing, promotions, and commercial analytics across global FMCG and QSR organizations. Strong background in building analytical frameworks, generating actionable insights, and supporting commercial teams in pricing, pack architecture, promotion effectiveness, and mix decisions. Experienced in working closely with regional and market teams, translating complex analyses into practical recommendations, and supporting execution through structured tools, simulators, and performance tracking. Known for a hands-on approach, strong problem structuring, comfort with imperfect data, and the ability to balance analytical rigor with business practicality.",
   metrics: [
     { label: "Years Experience", value: "10+" },
-    { label: "MAZ Profit Impact", value: "$12M" },
+    { label: "Profit Impact", value: "$12M" },
     { label: "Client NPS Score", value: "90+" },
     { label: "Productivity Gain", value: "26%" }
   ]
@@ -91,15 +91,15 @@ export const WORK_HISTORY: WorkExperience[] = [
     location: "Bengaluru, India",
     summary: "Drove strategic pricing, pack, and mix analytics across global markets, generating massive bottom-line profit improvements.",
     keyHighlights: [
-      "Recommended optimal pricing strategies in 2023, resulting in a $12 million profit impact from price adjustments in Middle America (MAZ) markets.",
+      "Recommended optimal pricing strategies in 2023, resulting in a $12 million profit impact from price adjustments across international markets.",
       "Played a key role in monthly, quarterly, and long-range commercial planning, ensuring decisions were grounded in data and scenario analysis.",
       "Collaborated with Data Scientists to oversee and execute RGM Analytics projects, successfully producing Price Elasticities and Sourcing Matrices.",
       "Led the development and deployment of an advanced RGM simulator tool, enabling businesses to optimize short-term and long-term pricing strategies, significantly boosting revenue and profit.",
       "Helped revenue managers simulate scenarios to evaluate Pack Price architecture, rate and mix changes to optimize pricing strategy.",
-      "Achieved successful Price simulation/optimization tool implementation in Middle American countries (MAZ), later scaled as a cloud-based revenue management product."
+      "Achieved successful Price simulation/optimization tool implementation across key regional markets, later scaled as a cloud-based revenue management product."
     ],
-    skills: ["$12M Profit Impact", "RGM Simulator Cloud Product", "Price Elasticity Matrices", "MAZ Pricing Strategy"],
-    impactMetric: "$12M Profit Impact in MAZ"
+    skills: ["$12M Profit Impact", "RGM Simulator Cloud Product", "Price Elasticity Matrices", "International Pricing Strategy"],
+    impactMetric: "$12M Profit Impact in Global Markets"
   },
   {
     id: "pepsico",
@@ -203,13 +203,13 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
     id: "rgm-simulator-cloud",
     title: "Enterprise Cloud RGM Scenario Simulator",
-    subtitle: "AB-InBev MAZ Markets Deployment",
-    description: "Designed and led the deployment of an advanced what-if simulation tool that allows commercial leaders to model price changes, rate & mix, pack architecture, and elasticities across Middle American countries.",
+    subtitle: "AB-InBev Multi-Market Deployment",
+    description: "Designed and led the deployment of an advanced what-if simulation tool that allows commercial leaders to model price changes, rate & mix, pack architecture, and elasticities across international beverage markets.",
     impact: "Delivered $12M profit impact and scaled into a global cloud revenue management product.",
     tags: ["RGM Tool", "Price Elasticity", "Simulation", "Cloud SaaS", "Power BI"],
     metrics: [
       { label: "Profit Impact", value: "$12M" },
-      { label: "Scope", value: "MAZ Region" },
+      { label: "Scope", value: "Global" },
       { label: "Adoption", value: "Enterprise SaaS" }
     ],
     category: "RGM"

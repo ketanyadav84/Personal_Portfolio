@@ -67,7 +67,7 @@ Price increases don't have to mean volume loss. By strategically engineering you
     id: "post-2",
     slug: "building-interactive-price-elasticity-simulators",
     title: "Building Interactive Price Elasticity & Scenario Simulators for Regional Commercial Teams",
-    summary: "Lessons learned from scaling custom scenario simulators across Middle American (MAZ) markets that yielded a $12M bottom-line impact.",
+    summary: "Lessons learned from scaling custom scenario simulators across international markets that yielded a $12M bottom-line impact.",
     category: "Analytics & Simulation",
     tags: ["RGM Simulator", "Cloud Analytics", "AB-InBev", "Scenario Modeling", "Python"],
     date: "May 12, 2026",
@@ -76,7 +76,7 @@ Price increases don't have to mean volume loss. By strategically engineering you
     content: `
 # Building Interactive Price Elasticity & Scenario Simulators for Regional Commercial Teams
 
-When managing commercial strategy across diverse international markets—such as Middle America (MAZ)—one major challenge arises: **Commercial managers on the ground often lack access to fast, intuitive tools to test pricing hypotheses.**
+When managing commercial strategy across diverse international markets one major challenge arises: **Commercial managers on the ground often lack access to fast, intuitive tools to test pricing hypotheses.**
 
 Static spreadsheets with thousands of unlinked cells often lead to slow decision cycles, version control issues, and overlooked cross-pack cannibalization.
 
