@@ -80,7 +80,7 @@ export const WORK_HISTORY: WorkExperience[] = [
       "Act as a bridge between analytics and business teams, ensuring outputs are usable, interpretable, and aligned to execution needs.",
       "Established governance structures and reporting processes, ensuring transparency and effective stakeholder decision-making."
     ],
-    skills: ["Program Delivery", "Personalized Promotions", "Analytics Governance", "Commercial Decision Support"],
+    skills: ["Program Delivery", "Manage Cross Functional Team", "Personalized Promotions", "Analytics Governance", "Commercial Decision Support"],
     impactMetric: "Multi-Discipline Analytics Deployment"
   },
   {
@@ -98,7 +98,7 @@ export const WORK_HISTORY: WorkExperience[] = [
       "Helped revenue managers simulate scenarios to evaluate Pack Price architecture, rate and mix changes to optimize pricing strategy.",
       "Achieved successful Price simulation/optimization tool implementation across key regional markets, later scaled as a cloud-based revenue management product."
     ],
-    skills: ["$12M Profit Impact", "RGM Simulator Cloud Product", "Price Elasticity Matrices", "International Pricing Strategy"],
+    skills: ["$12M Profit Impact", "Lead Product Development", "RGM Simulator Cloud Product", "Price Elasticity Matrices", "International Pricing Strategy"],
     impactMetric: "$12M Profit Impact in Global Markets"
   },
   {
@@ -132,7 +132,7 @@ export const WORK_HISTORY: WorkExperience[] = [
       "Advised clients on attack and defend pricing strategies based on price sensitivity matrices and conducted simulation workshops to drive capability adoption.",
       "Managed team resources for optimal project delivery, talent assessments, and fostering a culture of performance excellence."
     ],
-    skills: ["5-10% Profit Efficiencies", "NPS 90+", "CPG Giants (P&G, Unilever)", "Attacking Pricing Workshops"],
+    skills: ["5-10% Profit Efficiencies", "Lead Data Science and Consulting Team", "NPS 90+", "CPG Giants (P&G, Unilever)", "Attacking Pricing Workshops"],
     impactMetric: "90+ NPS & 5-10% Revenue Gains"
   },
   {
@@ -148,7 +148,7 @@ export const WORK_HISTORY: WorkExperience[] = [
       "Developed interactive dashboards and strategic models, significantly optimizing promotional effectiveness and promo ROI.",
       "Facilitated effective stakeholder collaboration, ensuring timely delivery and recognized multiple times for process innovation."
     ],
-    skills: ["26% Productivity Gain", "Interactive Dashboards", "Promo ROI Modeling", "Team Leadership"],
+    skills: ["26% Productivity Gain", "Lead Analytics Team", "Interactive Dashboards", "Promo ROI Modeling", "Team Leadership"],
     impactMetric: "26% Productivity Increase"
   },
   {
