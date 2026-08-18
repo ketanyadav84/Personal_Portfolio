@@ -1,0 +1,18 @@
+{
+  "name": "Ketan Yadav",
+  "title": "RGM | Commercial Analytics & Program Delivery Lead",
+  "pronouns": "He/Him/His",
+  "email": "ketanyadav@gmail.com",
+  "phone": "+91-9924470299",
+  "linkedIn": "https://www.linkedin.com/in/ketanyadav84/",
+  "dateOfBirth": "18th September 1984",
+  "languages": ["English", "Hindi", "Gujarati"],
+  "hobbies": ["Gardening", "Photography"],
+  "summary": "Analytics professional with 12+ years of experience in Revenue Growth Management (RGM), pricing, promotions, and commercial analytics across global FMCG and QSR organizations. Strong background in building analytical frameworks, generating actionable insights, and supporting commercial teams in pricing, pack architecture, promotion effectiveness, and mix decisions. Experienced in working closely with regional and market teams, translating complex analyses into practical recommendations, and supporting execution through structured tools, simulators, and performance tracking. Known for a hands-on approach, strong problem structuring, comfort with imperfect data, and the ability to balance analytical rigor with business practicality.",
+  "metrics": [
+    { "label": "Years Experience", "value": "12+" },
+    { "label": "Profit Impact", "value": "$12M" },
+    { "label": "Client NPS Score", "value": "90+" },
+    { "label": "Productivity Gain", "value": "26%" }
+  ]
+}

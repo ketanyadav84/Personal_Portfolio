@@ -1,0 +1,30 @@
+[
+  {
+    "id": "isb",
+    "degree": "Advanced Management Program in Business Analytics (AMPBA)",
+    "institution": "Indian School of Business (ISB) - Hyderabad",
+    "year": "May 2024",
+    "details": "Specialized executive program in business analytics, machine learning, and commercial decision science."
+  },
+  {
+    "id": "cfa",
+    "degree": "CFA (ICFAI) Certified",
+    "institution": "ICFAI University",
+    "year": "2010",
+    "details": "Financial valuation, portfolio analysis, and corporate finance consultancy."
+  },
+  {
+    "id": "mfa",
+    "degree": "Master of Financial Analysis",
+    "institution": "ICFAI University",
+    "year": "2010",
+    "details": "Advanced quantitative financial analysis, valuation models, and investment decision analysis."
+  },
+  {
+    "id": "graduate",
+    "degree": "Graduate (Account / Finance)",
+    "institution": "Maharaja Sayajirao University, Vadodara",
+    "year": "2006",
+    "details": "Core specialization in financial accounting, commercial economics, and statistics."
+  }
+]

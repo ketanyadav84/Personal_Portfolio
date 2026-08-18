@@ -1,0 +1,56 @@
+[
+  {
+    "id": "rgm-simulator-cloud",
+    "title": "Enterprise Cloud RGM Scenario Simulator",
+    "subtitle": "AB-InBev Multi-Market Deployment",
+    "description": "Designed and led the deployment of an advanced what-if simulation tool that allows commercial leaders to model price changes, rate & mix, pack architecture, and elasticities across international beverage markets.",
+    "impact": "Delivered $12M profit impact and scaled into a global cloud revenue management product.",
+    "tags": ["RGM Tool", "Price Elasticity", "Simulation", "Cloud SaaS", "Power BI"],
+    "metrics": [
+      { "label": "Profit Impact", "value": "$12M" },
+      { "label": "Scope", "value": "Global" },
+      { "label": "Adoption", "value": "Enterprise SaaS" }
+    ],
+    "category": "RGM"
+  },
+  {
+    "id": "nielsen-pricing-engine",
+    "title": "Predictive Pricing & Promotion Optimization Engine",
+    "subtitle": "NielsenIQ Global CPG Engagements",
+    "description": "Built ML-driven pricing models for Fortune 500 CPG giants (P&G, Coca-Cola, Unilever, J&J, Heineken) to evaluate trade spend ROI, cross-price elasticities, and attack/defend strategy.",
+    "impact": "Sustained 5-10% profit efficiencies and 90+ NPS across client engagements.",
+    "tags": ["CPG Analytics", "Trade Spend ROI", "Machine Learning", "Elasticity"],
+    "metrics": [
+      { "label": "Efficiency", "value": "5-10%" },
+      { "label": "Client NPS", "value": "90+" },
+      { "label": "Clients", "value": "P&G, Unilever+" }
+    ],
+    "category": "Analytics"
+  },
+  {
+    "id": "personalized-promotions-tiger",
+    "title": "Personalized Promotion Delivery Framework",
+    "subtitle": "Tiger Analytics Commercial Decision Support",
+    "description": "Bridged Data Science, Engineering, and App Dev teams to implement customer segmentation, price sensitivity algorithms, and personalized promotional offers in QSR and Retail.",
+    "impact": "Established unified governance and transformed commercial questions into deployable models.",
+    "tags": ["Personalization", "Program Delivery", "QSR & FMCG", "Governance"],
+    "metrics": [
+      { "label": "Deployment", "value": "End-to-End" },
+      { "label": "Quality", "value": "High Governance" }
+    ],
+    "category": "Product"
+  },
+  {
+    "id": "ppa-brand-laddering",
+    "title": "Price Pack Architecture & Brand Laddering Strategy",
+    "subtitle": "PepsiCo Revenue Management",
+    "description": "Developed comprehensive brand laddering frameworks and channel-specific price pack architectures to prevent cannibalization and capture unserved price points.",
+    "impact": "Enhanced brand equity, streamlined promotional guardrails, and boosted gross margin.",
+    "tags": ["PPA", "Brand Ladder", "Channel Mix", "FMCG"],
+    "metrics": [
+      { "label": "Category Growth", "value": "Multi-Pack" },
+      { "label": "Efficiency", "value": "Optimized" }
+    ],
+    "category": "Strategy"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "rgm-srm",
+    "title": "Revenue Growth Management",
+    "description": "End-to-end SRM/RGM/NRM strategies covering price pack architecture, promotion ROI, and category economics.",
+    "iconName": "TrendingUp",
+    "skills": [
+      "SRM / RGM / NRM",
+      "Rate & Mix Analysis",
+      "Trade Spend Optimization",
+      "Promotional ROI"
+    ]
+  },
+  {
+    "id": "pricing-elasticity",
+    "title": "Pricing Strategy & Elasticities",
+    "description": "Own-price and cross-price elasticity modeling, competitive benchmarking, attack-and-defend pricing strategies.",
+    "iconName": "Calculator",
+    "skills": [
+      "Price Elasticity Matrix",
+      "Competitive Strategy",
+      "Sourcing Matrices",
+      "Price Elasticity Modeling"
+    ]
+  },
+  {
+    "id": "pack-architecture",
+    "title": "Price Pack Architecture (PPA)",
+    "description": "Developing robust brand ladders, channel-pack mix optimization, and margin enhancement models.",
+    "iconName": "PackageCheck",
+    "skills": [
+      "Brand Laddering",
+      "Channel Pack Architecture",
+      "Mix Analytics",
+      "Product Architecture"
+    ]
+  },
+  {
+    "id": "simulators-tools",
+    "title": "Scenario Simulators & Cloud Products",
+    "description": "Architecting interactive what-if simulation tools and converting Excel models into enterprise cloud platforms.",
+    "iconName": "Cpu",
+    "skills": [
+      "What-If Scenario Simulators",
+      "Cloud Product Scaling",
+      "Analytical Dashboard Dev",
+      "Power BI / Excel Modeling"
+    ]
+  },
+  {
+    "id": "program-delivery",
+    "title": "Program Delivery & Governance",
+    "description": "Bridging business leaders with cross-functional Data Science, Engineering, and App Dev teams.",
+    "iconName": "Target",
+    "skills": [
+      "Stakeholder Management",
+      "Agile Analytics Delivery",
+      "Governance Structures",
+      "Cross-Functional Leadership"
+    ]
+  },
+  {
+    "id": "commercial-planning",
+    "title": "Commercial & Long-Range Planning",
+    "description": "Grounded 1-Year and 3-Year commercial planning in data, scenario analysis, and regional execution.",
+    "iconName": "Briefcase",
+    "skills": [
+      "Annual & 3YP Commercial Planning",
+      "FMCG Economics",
+      "Margin Optimization",
+      "Executive Decision Support"
+    ]
+  }
+]
