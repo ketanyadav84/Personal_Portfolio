@@ -1,0 +1,62 @@
+{
+  "badge": "Career Milestones & Journey",
+  "title": "Professional Journey Overview",
+  "subtitle": "A 12+ year trajectory spanning commercial analytics, price pack architecture, revenue management products, and multi-disciplinary program delivery.",
+  "viewMoreButtonText": "View In-Depth Experience",
+  "milestones": [
+    {
+      "id": "tiger-analytics",
+      "company": "Tiger Analytics",
+      "role": "Program Lead",
+      "period": "Sep’24 - Present",
+      "isCurrent": true,
+      "highlightBadge": "Present",
+      "summary": "Leading analytics programs focused on personalized promotions and commercial decision support, from problem framing through deployment."
+    },
+    {
+      "id": "ab-inbev",
+      "company": "AB-InBev",
+      "role": "Analytics Manager RGM Analytics",
+      "period": "Sep’22 – Aug’24",
+      "isCurrent": false,
+      "highlightBadge": "$12M Impact",
+      "summary": "Drove strategic pricing, pack, and mix analytics across global markets, generating massive bottom-line profit improvements."
+    },
+    {
+      "id": "pepsico",
+      "company": "PepsiCo",
+      "role": "Senior Manager - Revenue Management and Sales Transformation",
+      "period": "Apr’22 – Aug’22",
+      "isCurrent": false,
+      "highlightBadge": "PPA Modeling",
+      "summary": "Led strategic revenue optimization initiatives, promotional optimization, and competitor benchmarking."
+    },
+    {
+      "id": "nielseniq",
+      "company": "Nielsen IQ",
+      "role": "Analytics Manager - RGM Analytics",
+      "period": "Nov’19 – Apr’22",
+      "isCurrent": false,
+      "highlightBadge": "90+ NPS",
+      "summary": "Leveraged machine learning and statistical modeling for leading CPG global giants (P&G, Coca-Cola, Unilever, J&J, Heineken)."
+    },
+    {
+      "id": "tcs",
+      "company": "Tata Consultancy Services (TCS)",
+      "role": "Senior Business Analyst - Analytics & Insight",
+      "period": "Feb’13 – Oct’19",
+      "isCurrent": false,
+      "highlightBadge": "+26% Productivity",
+      "summary": "Managed analytics team focused on RGM modeling, delivering 26% productivity gain and multiple award-winning models."
+    },
+    {
+      "id": "other-exp",
+      "company": "KIFS / Jhaveri / Sharekhan",
+      "role": "Research Executive / Equity Research / Client Relations",
+      "period": "Dec’07 – Jan’13",
+      "isCurrent": false,
+      "highlightBadge": "Finance Roots",
+      "summary": "Prior foundation in equity research, financial analysis, and financial market modeling."
+    }
+  ]
+}

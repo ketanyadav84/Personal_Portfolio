@@ -1,3 +1,21 @@
+export interface JourneyMilestone {
+  id: string;
+  company: string;
+  role: string;
+  period: string;
+  summary: string;
+  isCurrent?: boolean;
+  highlightBadge?: string;
+}
+
+export interface CareerJourneyContent {
+  badge: string;
+  title: string;
+  subtitle: string;
+  viewMoreButtonText: string;
+  milestones: JourneyMilestone[];
+}
+
 export interface WorkExperience {
   id: string;
   company: string;

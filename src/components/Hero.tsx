@@ -1,5 +1,5 @@
 import React from 'react';
-import { PERSONAL_INFO, WORK_HISTORY } from '../data/resumeData';
+import { PERSONAL_INFO, CAREER_JOURNEY } from '../data/resumeData';
 import { ArrowRight, Download, Mail, Linkedin, Award, TrendingUp, Calculator, Briefcase, ChevronRight, Sparkles, Calendar } from 'lucide-react';
 
 interface HeroProps {
@@ -8,6 +8,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal, onNavigateTab }) => {
+  const yearsMetric = PERSONAL_INFO.metrics?.find((m) => m.label.toLowerCase().includes('year'))?.value || '12+';
+
   return (
     <section id="about" className="relative pt-28 pb-20 md:pt-36 md:pb-24 overflow-hidden">
       {/* Subtle Background Accent Glows */}
@@ -112,13 +114,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal, onNavigateTab }) 
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-2 border border-blue-200/60 dark:border-blue-800/60">
                 <Briefcase className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                <span>Career Milestones & Journey</span>
+                <span>{CAREER_JOURNEY.badge}</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Professional Journey Overview
+                {CAREER_JOURNEY.title}
               </h2>
               <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl">
-                A 10+ year trajectory spanning commercial analytics, price pack architecture, revenue management products, and multi-disciplinary program delivery.
+                {CAREER_JOURNEY.subtitle}
               </p>
             </div>
 
@@ -128,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal, onNavigateTab }) 
                 id="hero-view-full-experience-btn"
                 className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors whitespace-nowrap cursor-pointer"
               >
-                <span>View In-Depth Experience</span>
+                <span>{CAREER_JOURNEY.viewMoreButtonText || "View In-Depth Experience"}</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
             )}
@@ -136,22 +138,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal, onNavigateTab }) 
 
           {/* Timeline Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {WORK_HISTORY.map((exp, index) => (
+            {CAREER_JOURNEY.milestones.map((exp) => (
               <div
                 key={exp.id}
                 id={`career-overview-card-${exp.id}`}
                 className="relative rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-6 flex flex-col justify-between hover:border-blue-400/80 dark:hover:border-blue-600/80 transition-all shadow-xs hover:shadow-md group"
               >
-                {/* Top Row: Period & Company */}
+                {/* Top Row: Period & Highlight Badge */}
                 <div>
                   <div className="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
                     <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                       <Calendar className="w-3 h-3 text-blue-500" />
                       {exp.period}
                     </span>
-                    {index === 0 && (
-                      <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center gap-1">
-                        <Sparkles className="w-2.5 h-2.5" /> Present
+                    {(exp.isCurrent || exp.highlightBadge) && (
+                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 ${
+                        exp.isCurrent
+                          ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300'
+                          : 'bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300'
+                      }`}>
+                        {exp.isCurrent && <Sparkles className="w-2.5 h-2.5" />}
+                        {exp.highlightBadge || (exp.isCurrent ? 'Present' : '')}
                       </span>
                     )}
                   </div>

@@ -10,7 +10,8 @@ All content across your portfolio is now organized into **dedicated, standalone 
 | File Path | Description & What It Controls |
 | :--- | :--- |
 | **`/src/content/profile.json`** | Your name, headline title, contact information (email, phone, LinkedIn), executive bio summary, key metrics, languages, and personal details. |
-| **`/src/content/experiences.json`** | All career history entries (Tiger Analytics, AB-InBev, PepsiCo, Nielsen IQ, TCS, etc.), role titles, dates, locations, bullet points, skill badges, and impact metrics. |
+| **`/src/content/careerJourney.json`** | The "Career Milestones & Journey" / "Professional Journey Overview" section on the About page: section title, subtitle, button text, and card summaries/badges. |
+| **`/src/content/experiences.json`** | In-depth professional experience timeline (Tiger Analytics, AB-InBev, PepsiCo, Nielsen IQ, TCS, etc.), role titles, dates, locations, bullet points, skill badges, and impact metrics. |
 | **`/src/content/capabilities.json`** | Core capability pillars (Revenue Growth Management, Pricing Elasticities, PPA, Scenario Simulators, Program Delivery, Commercial Planning). |
 | **`/src/content/education.json`** | Academic degrees and executive qualifications (ISB AMPBA, CFA, Master of Financial Analysis, Bachelor's degree). |
 | **`/src/content/portfolio.json`** | Featured case studies, business impact summaries, key metrics, and categorization tags. |

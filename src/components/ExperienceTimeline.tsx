@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { WORK_HISTORY, EDUCATION } from '../data/resumeData';
+import { WORK_HISTORY, EDUCATION, PERSONAL_INFO } from '../data/resumeData';
 import { Building2, Calendar, GraduationCap, Award, ChevronDown, ChevronUp, CheckCircle, Search } from 'lucide-react';
 
 export const ExperienceTimeline: React.FC = () => {
   const [filterTerm, setFilterTerm] = useState('');
   const [expandedId, setExpandedId] = useState<string | null>('ab-inbev'); // Expanded by default
+  const yearsMetric = PERSONAL_INFO.metrics?.find((m) => m.label.toLowerCase().includes('year'))?.value || '12+';
 
   const filteredHistory = WORK_HISTORY.filter(
     (item) =>
@@ -26,7 +27,7 @@ export const ExperienceTimeline: React.FC = () => {
               Professional Experience
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-2 max-w-xl">
-              10+ years driving revenue management, commercial decision engines, pricing elasticities, and program delivery across FMCG and QSR leaders.
+              {yearsMetric} years driving revenue management, commercial decision engines, pricing elasticities, and program delivery across FMCG and QSR leaders.
             </p>
           </div>
 
